@@ -20,11 +20,11 @@
         android:id="@+id/tilt_down_rain_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/colorBlackBackground"
+        android:background="#ffffff"
         android:visibility="gone"
         rain:tiltColor="@color/colorRainDrop"
         rain:tiltCount="50"
         rain:tiltOffsetX="15"
         rain:tiltOffsetY="30"
-        rain:tiltRandColor="false" />
+        rain:tiltRandColor="true" />
 </android.support.constraint.ConstraintLayout>
