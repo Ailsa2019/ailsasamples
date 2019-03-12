@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:rain="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.ailsa.example.rain.FallsDownRainView
+        android:id="@+id/falls_down_rain_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorBlackBackground"
+        rain:color="@color/colorBlueRainDrop"
+        rain:count="50"
+        rain:offsetY="30"
+        rain:randColor="false" />
+
+    <com.ailsa.example.rain.TiltDownRainView
+        android:id="@+id/tilt_down_rain_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorBlackBackground"
+        android:visibility="gone"
+        rain:tiltColor="@color/colorRainDrop"
+        rain:tiltCount="50"
+        rain:tiltOffsetX="15"
+        rain:tiltOffsetY="30"
+        rain:tiltRandColor="false" />
+</android.support.constraint.ConstraintLayout>

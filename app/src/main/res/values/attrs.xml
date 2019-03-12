@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 垂直下落的雨的属性 -->
+    <declare-styleable name="FallsDownRainView">
+        <attr name="count" format="integer" />      <!-- 雨点数量 -->
+        <attr name="color" format="color" />        <!-- 雨点颜色 -->
+        <attr name="randColor" format="boolean" />  <!-- 是否随机生成雨点颜色 -->
+        <attr name="offsetY" format="integer" />    <!-- 雨点在Y方向的偏移量 -->
+    </declare-styleable>
+
+    <!-- 倾斜下落的雨的属性 -->
+    <declare-styleable name="TiltDownRainView">
+        <attr name="tiltCount" format="integer" />      <!-- 雨点数量 -->
+        <attr name="tiltColor" format="color" />        <!-- 雨点颜色 -->
+        <attr name="tiltRandColor" format="boolean" />  <!-- 是否随机生成雨点颜色 -->
+        <attr name="tiltOffsetX" format="integer" />    <!-- 雨点在X方向的偏移量 -->
+        <attr name="tiltOffsetY" format="integer" />    <!-- 雨点在Y方向的偏移量 -->
+    </declare-styleable>
+</resources>
