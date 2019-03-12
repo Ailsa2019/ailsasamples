@@ -26,5 +26,5 @@
         rain:tiltCount="50"
         rain:tiltOffsetX="15"
         rain:tiltOffsetY="30"
-        rain:tiltRandColor="false" />
+        rain:tiltRandColor="true" />
 </android.support.constraint.ConstraintLayout>
