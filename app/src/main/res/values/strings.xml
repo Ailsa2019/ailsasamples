@@ -1,3 +1,5 @@
 <resources>
-    <string name="app_name">Rain</string>
+    <string name="app_name">StarField</string>
+    <string name="rain_name">Rain</string>
+    <string name="music_name">Music</string>
 </resources>
