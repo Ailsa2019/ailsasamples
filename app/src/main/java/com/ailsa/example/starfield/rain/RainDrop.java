@@ -1,4 +1,4 @@
-package com.ailsa.example.rain;
+package com.ailsa.example.starfield.rain;
 
 import android.graphics.Canvas;
 import android.graphics.Paint;

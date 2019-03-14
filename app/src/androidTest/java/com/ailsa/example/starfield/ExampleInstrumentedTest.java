@@ -1,4 +1,4 @@
-package com.ailsa.example.rain;
+package com.ailsa.example.starfield;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

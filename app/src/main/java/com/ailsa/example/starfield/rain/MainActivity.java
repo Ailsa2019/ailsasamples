@@ -1,10 +1,12 @@
-package com.ailsa.example.rain;
+package com.ailsa.example.starfield.rain;
 
 import android.os.Handler;
 import android.os.Message;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+
+import com.ailsa.example.starfield.R;
 
 /**
  * @author ailsa

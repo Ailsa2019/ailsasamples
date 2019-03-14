@@ -2,10 +2,10 @@
 <resources>
     <!-- 垂直下落的雨的属性 -->
     <declare-styleable name="FallsDownRainView">
-        <attr name="count" format="integer" />      <!-- 雨点数量 -->
-        <attr name="color" format="color" />        <!-- 雨点颜色 -->
-        <attr name="randColor" format="boolean" />  <!-- 是否随机生成雨点颜色 -->
-        <attr name="offsetY" format="integer" />    <!-- 雨点在Y方向的偏移量 -->
+        <attr name="fallCount" format="integer" />      <!-- 雨点数量 -->
+        <attr name="fallColor" format="color" />        <!-- 雨点颜色 -->
+        <attr name="fallRandColor" format="boolean" />  <!-- 是否随机生成雨点颜色 -->
+        <attr name="fallOffsetY" format="integer" />    <!-- 雨点在Y方向的偏移量 -->
     </declare-styleable>
 
     <!-- 倾斜下落的雨的属性 -->
@@ -15,5 +15,17 @@
         <attr name="tiltRandColor" format="boolean" />  <!-- 是否随机生成雨点颜色 -->
         <attr name="tiltOffsetX" format="integer" />    <!-- 雨点在X方向的偏移量 -->
         <attr name="tiltOffsetY" format="integer" />    <!-- 雨点在Y方向的偏移量 -->
+    </declare-styleable>
+
+    <!-- 音量条的属性 -->
+    <declare-styleable name="MusicView">
+        <attr name="volumeCount" format="integer" />               <!-- 音量条数量 -->
+        <attr name="rectHeight" format="integer" />          <!-- 矩形高度 -->
+        <attr name="rectWidth" format="integer" />           <!-- 矩形宽度 -->
+        <attr name="rectTopSpace" format="integer" />        <!-- 矩形上间距 -->
+        <attr name="rectLeftSpace" format="integer" />       <!-- 矩形左间距 -->
+        <attr name="topVolumesColor" format="color" />       <!-- 向上方向音量条的颜色 -->
+        <attr name="bottomVolumesColor" format="color" />    <!-- 向下方向音量条的颜色 -->
+        <attr name="sleepTime" format="integer" />           <!-- 音量条变化的间隔时间 -->
     </declare-styleable>
 </resources>

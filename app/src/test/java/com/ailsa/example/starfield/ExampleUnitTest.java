@@ -1,4 +1,4 @@
-package com.ailsa.example.rain;
+package com.ailsa.example.starfield;
 
 import org.junit.Test;
 

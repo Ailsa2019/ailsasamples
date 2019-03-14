@@ -8,4 +8,6 @@
     <color name="colorWhiteBackground">#000000</color>
     <color name="colorRainDrop">#ffffff</color>
     <color name="colorBlueRainDrop">#55aaff</color>
+    <color name="colorTopVolumes">#ffffff</color>
+    <color name="colorBottomVolumes">#0000ff</color>
 </resources>

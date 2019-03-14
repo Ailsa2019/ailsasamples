@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:music="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.ailsa.example.starfield.music.MusicActivity">
+
+    <com.ailsa.example.starfield.music.MusicView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorBlackBackground"
+        music:bottomVolumesColor="@color/colorBottomVolumes"
+        music:rectHeight="30"
+        music:rectLeftSpace="20"
+        music:rectTopSpace="15"
+        music:rectWidth="40"
+        music:sleepTime="50"
+        music:topVolumesColor="@color/colorTopVolumes"
+        music:volumeCount="20" />
+</android.support.constraint.ConstraintLayout>

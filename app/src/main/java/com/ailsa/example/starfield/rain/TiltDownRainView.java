@@ -1,10 +1,12 @@
-package com.ailsa.example.rain;
+package com.ailsa.example.starfield.rain;
 
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Canvas;
 import android.support.annotation.Nullable;
 import android.util.AttributeSet;
+
+import com.ailsa.example.starfield.R;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -14,9 +16,9 @@ import java.util.List;
  * <p>
  * 2019/3/7 0007
  * <p>
- * RainView，下雨效果的具体实现 [ 垂直 ]
+ * RainView，下雨效果的具体实现
  */
-public class FallsDownRainView extends BaseRainView {
+public class TiltDownRainView extends BaseRainView {
     /**
      * 雨点集合
      */
@@ -30,15 +32,17 @@ public class FallsDownRainView extends BaseRainView {
     /**
      * 雨点在X、Y方向的偏移量
      */
+    private int offsetX;
     private int offsetY;
 
-    public FallsDownRainView(Context context, @Nullable AttributeSet attrs) {
+    public TiltDownRainView(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
-        TypedArray typedArray = context.obtainStyledAttributes(attrs, R.styleable.FallsDownRainView);
-        rainDropCount = typedArray.getInteger(R.styleable.FallsDownRainView_count, 30);
-        rainDropColor = typedArray.getInteger(R.styleable.FallsDownRainView_color, context.getColor(R.color.colorRainDrop));
-        isRandColor = typedArray.getBoolean(R.styleable.FallsDownRainView_randColor, false);
-        offsetY = typedArray.getInteger(R.styleable.FallsDownRainView_offsetY, 20);
+        TypedArray typedArray = context.obtainStyledAttributes(attrs, R.styleable.TiltDownRainView);
+        rainDropCount = typedArray.getInteger(R.styleable.TiltDownRainView_tiltCount, 30);
+        rainDropColor = typedArray.getInteger(R.styleable.TiltDownRainView_tiltColor, context.getColor(R.color.colorRainDrop));
+        isRandColor = typedArray.getBoolean(R.styleable.TiltDownRainView_tiltRandColor, false);
+        offsetX = typedArray.getInteger(R.styleable.TiltDownRainView_tiltOffsetX, 0);
+        offsetY = typedArray.getInteger(R.styleable.TiltDownRainView_tiltOffsetY, 20);
         typedArray.recycle();
         rainDrops = new ArrayList<>();
     }
@@ -46,7 +50,7 @@ public class FallsDownRainView extends BaseRainView {
     @Override
     protected void initRainDrops() {
         for (int i = 0; i < rainDropCount; i++) {
-            rainDrops.add(new RainDrop(getHeight(), getWidth(), offsetY,
+            rainDrops.add(new RainDrop(getHeight(), getWidth(), offsetX, offsetY,
                     rainDropColor, isRandColor));
         }
     }

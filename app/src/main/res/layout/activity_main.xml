@@ -4,19 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".rain.MainActivity">
 
-    <com.ailsa.example.rain.FallsDownRainView
+    <com.ailsa.example.starfield.rain.FallsDownRainView
         android:id="@+id/falls_down_rain_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/colorBlackBackground"
-        rain:color="@color/colorBlueRainDrop"
-        rain:count="50"
-        rain:offsetY="30"
-        rain:randColor="false" />
+        rain:fallColor="@color/colorBlueRainDrop"
+        rain:fallCount="50"
+        rain:fallOffsetY="30"
+        rain:fallRandColor="false" />
 
-    <com.ailsa.example.rain.TiltDownRainView
+    <com.ailsa.example.starfield.rain.TiltDownRainView
         android:id="@+id/tilt_down_rain_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
