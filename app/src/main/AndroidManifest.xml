@@ -10,8 +10,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".music.MusicActivity"
-            android:label="@string/music_name">
+            android:name=".MainActivity"
+            android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -19,14 +19,11 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".rain.MainActivity"
-            android:label="@string/rain_name">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:name=".music.MusicActivity"
+            android:label="@string/music_name" />
+        <activity
+            android:name=".rain.RainActivity"
+            android:label="@string/rain_name" />
     </application>
 
 </manifest>

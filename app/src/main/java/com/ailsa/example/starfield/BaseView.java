@@ -1,4 +1,4 @@
-package com.ailsa.example.starfield.music;
+package com.ailsa.example.starfield;
 
 import android.content.Context;
 import android.graphics.Canvas;
@@ -11,11 +11,11 @@ import android.view.View;
  * <p>
  * 2019/3/12 0012
  * <p>
- * BaseMusicView，音量效果的基础View
+ * BaseView，粒子效果的基础View
  */
-public abstract class BaseMusicView extends View {
+public abstract class BaseView extends View {
     /**
-     * 自定义线程，实现音量条的移动效果
+     * 自定义线程，实现粒子的移动效果
      */
     private MThread thread;
     /**
@@ -23,40 +23,40 @@ public abstract class BaseMusicView extends View {
      */
     protected int sleepTime;
 
-    public BaseMusicView(Context context) {
+    public BaseView(Context context) {
         super(context);
     }
 
-    public BaseMusicView(Context context, @Nullable AttributeSet attrs) {
+    public BaseView(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
         sleepTime = 30;
     }
 
     /**
-     * 初始化所有音量条，子类实现
+     * 初始化所有粒子 [ 子类实现 ]
      */
-    protected abstract void initVolumes();
+    protected abstract void initParticles();
 
     /**
-     * 绘制所有音量条，子类实现
+     * 绘制所有粒子 [ 子类实现 ]
      *
      * @param canvas 画布
      */
-    protected abstract void drawVolumes(Canvas canvas);
+    protected abstract void drawParticles(Canvas canvas);
 
     /**
-     * 移动所有音量条，子类实现
+     * 移动所有粒子 [ 子类实现 ]
      */
-    protected abstract void moveVolumes();
+    protected abstract void moveParticles();
 
     @Override
     protected void onDraw(Canvas canvas) {
         if (thread == null) {
-            initVolumes();            // 初始化所有音量条
+            initParticles();            // 初始化所有粒子
             thread = new MThread();
             thread.start();
         } else {
-            drawVolumes(canvas);      // 绘制所有音量条
+            drawParticles(canvas);      // 绘制所有粒子
         }
     }
 
@@ -64,7 +64,7 @@ public abstract class BaseMusicView extends View {
         @Override
         public void run() {
             while (true) {
-                moveVolumes();               // 移动所有音量条
+                moveParticles();               // 移动所有粒子
                 postInvalidate();           // 调用onDraw()重绘
                 try {
                     Thread.sleep(sleepTime);

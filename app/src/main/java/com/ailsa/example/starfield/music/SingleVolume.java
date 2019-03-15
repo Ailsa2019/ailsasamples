@@ -3,6 +3,8 @@ package com.ailsa.example.starfield.music;
 import android.graphics.Canvas;
 import android.graphics.Paint;
 
+import com.ailsa.example.starfield.IAnimation;
+
 import java.util.Random;
 
 /**
@@ -110,7 +112,7 @@ public class SingleVolume implements IAnimation {
     }
 
     @Override
-    public void drawSingleVolume(Canvas canvas) {
+    public void drawSingleParticle(Canvas canvas) {
         int rectNum = 0;
         for (int i = 0; i < verticalCount; i++) {
             paint.setColor(topVolumesColor);
@@ -129,7 +131,7 @@ public class SingleVolume implements IAnimation {
     }
 
     @Override
-    public void moveSingleVolume() {
+    public void moveSingleParticle() {
         initVerticalCount();
     }
 

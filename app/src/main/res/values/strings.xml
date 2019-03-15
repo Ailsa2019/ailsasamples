@@ -2,4 +2,7 @@
     <string name="app_name">StarField</string>
     <string name="rain_name">Rain</string>
     <string name="music_name">Music</string>
+
+    <string name="rain_effect">下雨效果</string>
+    <string name="volume_bar_effect">音量效果</string>
 </resources>

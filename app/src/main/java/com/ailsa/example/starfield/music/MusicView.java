@@ -6,6 +6,7 @@ import android.graphics.Canvas;
 import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 
+import com.ailsa.example.starfield.BaseView;
 import com.ailsa.example.starfield.R;
 
 import java.util.ArrayList;
@@ -18,7 +19,7 @@ import java.util.List;
  * <p>
  * MusicView，音量条的具体实现
  */
-public class MusicView extends BaseMusicView {
+public class MusicView extends BaseView {
     /**
      * 音量条集合
      */
@@ -60,7 +61,7 @@ public class MusicView extends BaseMusicView {
     }
 
     @Override
-    protected void initVolumes() {
+    protected void initParticles() {
         for (int i = 0; i < volumeCount; i++) {
             SingleVolume volume = new SingleVolume(getHeight(), rectHeight, rectWidth,
                     rectLeftSpace, rectTopSpace, lastVolumeRight,
@@ -71,17 +72,17 @@ public class MusicView extends BaseMusicView {
     }
 
     @Override
-    protected void drawVolumes(Canvas canvas) {
+    protected void drawParticles(Canvas canvas) {
         for (SingleVolume volume : volumes) {
-            volume.drawSingleVolume(canvas);
+            volume.drawSingleParticle(canvas);
         }
         sleepTime = 500;    // 改变音量条变化速度的参数
     }
 
     @Override
-    protected void moveVolumes() {
+    protected void moveParticles() {
         for (SingleVolume volume : volumes) {
-            volume.moveSingleVolume();
+            volume.moveSingleParticle();
         }
     }
 }

@@ -13,9 +13,9 @@ import com.ailsa.example.starfield.R;
  * <p>
  * 2019/03/07 0007
  * <p>
- * MainActivity，下雨效果展示界面，交替展示垂直下落和倾斜下落效果
+ * RainActivity，下雨效果展示界面，交替展示垂直下落和倾斜下落效果
  */
-public class MainActivity extends AppCompatActivity {
+public class RainActivity extends AppCompatActivity {
     /**
      * 垂直下落的雨
      */
@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_rain);
         initViews();
         handler.sendEmptyMessageDelayed(1, 1000);
     }

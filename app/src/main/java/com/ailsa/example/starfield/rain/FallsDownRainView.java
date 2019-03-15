@@ -6,6 +6,7 @@ import android.graphics.Canvas;
 import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 
+import com.ailsa.example.starfield.BaseView;
 import com.ailsa.example.starfield.R;
 
 import java.util.ArrayList;
@@ -18,7 +19,7 @@ import java.util.List;
  * <p>
  * RainView，下雨效果的具体实现 [ 垂直 ]
  */
-public class FallsDownRainView extends BaseRainView {
+public class FallsDownRainView extends BaseView {
     /**
      * 雨点集合
      */
@@ -46,7 +47,7 @@ public class FallsDownRainView extends BaseRainView {
     }
 
     @Override
-    protected void initRainDrops() {
+    protected void initParticles() {
         for (int i = 0; i < rainDropCount; i++) {
             rainDrops.add(new RainDrop(getHeight(), getWidth(), offsetY,
                     rainDropColor, isRandColor));
@@ -54,17 +55,16 @@ public class FallsDownRainView extends BaseRainView {
     }
 
     @Override
-    protected void drawRainDrops(Canvas canvas) {
+    protected void drawParticles(Canvas canvas) {
         for (RainDrop rainDrop : rainDrops) {
-            rainDrop.drawSingleRainDrop(canvas);
+            rainDrop.drawSingleParticle(canvas);
         }
     }
 
     @Override
-    protected void moveRainDrops() {
+    protected void moveParticles() {
         for (RainDrop rainDrop : rainDrops) {
-            rainDrop.moveSingleRainDrop();
+            rainDrop.moveSingleParticle();
         }
     }
-
 }

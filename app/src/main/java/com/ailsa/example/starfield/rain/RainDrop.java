@@ -3,6 +3,8 @@ package com.ailsa.example.starfield.rain;
 import android.graphics.Canvas;
 import android.graphics.Paint;
 
+import com.ailsa.example.starfield.IAnimation;
+
 import java.util.Random;
 
 /**
@@ -12,7 +14,7 @@ import java.util.Random;
  * <p>
  * RainDrop，单个雨点的实现
  */
-public class RainDrop {
+public class RainDrop implements IAnimation {
     /**
      * 屏幕宽高
      */
@@ -54,7 +56,7 @@ public class RainDrop {
      * @param color       雨点颜色
      * @param isRandColor 是否随机生成雨点颜色
      */
-    public RainDrop(int height, int width, int offsetY, int color, boolean isRandColor) {
+    RainDrop(int height, int width, int offsetY, int color, boolean isRandColor) {
         this.height = height;
         this.width = width;
         offsetX = 0;
@@ -74,7 +76,7 @@ public class RainDrop {
      * @param color       雨点颜色
      * @param isRandColor 是否随机生成雨点颜色
      */
-    public RainDrop(int height, int width, int offsetX, int offsetY, int color, boolean isRandColor) {
+    RainDrop(int height, int width, int offsetX, int offsetY, int color, boolean isRandColor) {
         this.height = height;
         this.width = width;
         this.offsetX = offsetX;
@@ -114,19 +116,13 @@ public class RainDrop {
         speed = 0.2f + random.nextFloat();
     }
 
-    /**
-     * 绘制单个雨点
-     *
-     * @param canvas 画布
-     */
-    void drawSingleRainDrop(Canvas canvas) {
+    @Override
+    public void drawSingleParticle(Canvas canvas) {
         canvas.drawLine(startX, startY, stopX, stopY, paint);
     }
 
-    /**
-     * 单个雨点的移动逻辑
-     */
-    void moveSingleRainDrop() {
+    @Override
+    public void moveSingleParticle() {
         startX += offsetX * speed;
         stopX += offsetX * speed;
         startY += offsetY * speed;

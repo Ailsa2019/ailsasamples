@@ -1,30 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:rain="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".rain.MainActivity">
+    tools:context="com.ailsa.example.starfield.MainActivity">
 
-    <com.ailsa.example.starfield.rain.FallsDownRainView
-        android:id="@+id/falls_down_rain_view"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@color/colorBlackBackground"
-        rain:fallColor="@color/colorBlueRainDrop"
-        rain:fallCount="50"
-        rain:fallOffsetY="30"
-        rain:fallRandColor="false" />
+    <Button
+        android:id="@+id/btn_rain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/btn_margin_top"
+        android:background="@drawable/bg_btn"
+        android:text="@string/rain_effect"
+        android:textColor="@color/colorWhiteText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <com.ailsa.example.starfield.rain.TiltDownRainView
-        android:id="@+id/tilt_down_rain_view"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@color/colorWhiteBackground"
-        android:visibility="gone"
-        rain:tiltColor="@color/colorRainDrop"
-        rain:tiltCount="50"
-        rain:tiltOffsetX="15"
-        rain:tiltOffsetY="30"
-        rain:tiltRandColor="true" />
+    <Button
+        android:id="@+id/btn_music"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_btn"
+        android:text="@string/volume_bar_effect"
+        android:textColor="@color/colorWhiteText"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/btn_rain"
+        app:layout_constraintStart_toStartOf="@+id/btn_rain"
+        app:layout_constraintTop_toBottomOf="@+id/btn_rain"
+        app:layout_constraintVertical_bias="0.05" />
 </android.support.constraint.ConstraintLayout>
